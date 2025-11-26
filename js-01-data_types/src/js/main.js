@@ -28,3 +28,17 @@ const currentNationality = "Mexican";
 
 // De las variables anteriores muestra en console el sig. mensaje:
 // "My name is Daniel, I am 24 years old and I am Mexican."
+console.log(`Hola CH62 soy ${userName} \n actualmente tengo ${userAge} y mi nacionalidad es ${currentNationality}` );
+
+
+/* ================================================================
+   3. DATOS PRIMITIVOS: NUMBER Y BIGINT 
+   ================================================================
+   JavaScript tiene un solo tipo para enteros y decimales: 'number'.
+   Number: Tipo de dato numérico de 64 bits para representar valores enteros, punto flotante, +Infinity, -Infinity, NaN
+*/
+
+const gravityEarth = 9.81; // Aceleración debido a la gravedad en m/s²
+
+console.log( typeof gravityEarth); // 'number'
+
