@@ -66,7 +66,6 @@ sintaxis:
     };
 */
 
-console.log( printFullName("Johan", "Gonzalez") );
 
 
 /**
@@ -74,7 +73,43 @@ console.log( printFullName("Johan", "Gonzalez") );
  * @param {string} firstName nombre de la persona
  * @param {string} lastName apellido de la persona
  * @returns concatenación del nombre y apellido de la persona en la cohorte Ch62
- */
+*/
 const printFullName = function (firstName, lastName) {
   return `${firstName} ${lastName} estudiante de la Ch62`;
 };
+
+console.log( printFullName("Johan", "Gonzalez") );
+/*
+ ------------ Funciones flecha -----------------------
+             (arrow functions)
+Funciones similares a las funciones expresadas pero:
+ - No requiere la palabra reservada function
+ - Si tiene una sola instrucción no requiere las llaves {}
+ - Si la instrucción es el mismo retorno, no requiere la palabra return
+
+sintaxis:
+    const nombreVariable = (parametros) => instrucción;
+
+    const nombreVariable = (parametros) => {
+        instrucción;
+        return expresión;
+    }
+*/
+
+// Convertir la función printFullName a función flecha
+const nombreCompleto = (nombre, apellido) => `${nombre} ${apellido} estudiante de la Ch62`;
+
+/*
+ ------------ Parámetros por defecto -----------------------
+             (default parameters)
+Inicializa un parámetro de la función, si no se envía el argumento cuando se invoca
+
+*/
+
+const makeCoffe = ( type = "Americano" ) => `Preparando un café ${type}`;
+
+console.log( makeCoffe("Latte") ); // Preparando un café Latte
+console.log( makeCoffe() ); // Preparando un café Americano
+
+// TODO: generar una función que calcule el área de un rectángulo
+// usando parámetros por defecto para largo y ancho.
