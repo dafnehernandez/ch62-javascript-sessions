@@ -66,9 +66,6 @@ sintaxis:
     };
 */
 
-console.log( printFullName("Johan", "Gonzalez") );
-
-
 /**
  * Función que recibe nombre y apellido y retorna el nombre completo
  * @param {string} firstName nombre de la persona
@@ -78,3 +75,42 @@ console.log( printFullName("Johan", "Gonzalez") );
 const printFullName = function (firstName, lastName) {
   return `${firstName} ${lastName} estudiante de la Ch62`;
 };
+
+console.log(printFullName("Johan", "Gonzalez") );
+
+/*
+ ------------ Funciones flecha -----------------------
+             (arrow functions)
+Funciones similares a las funciones expresadas pero:
+ - No requiere la palabra reservada function
+ - Si tiene una sola instrucción no requiere las llaves {}
+ - Si la instrucción es el mismo retorno, no requiere la palabra return
+sintaxis:
+    const nombreVariable = (parametros) => instrucción;
+    const nombreVariable = (parametros) => {
+        instrucción;
+        return expresión;
+    }
+*/
+
+const printUserName = (firstName, lastName) => `${firstName} ${lastName} estudiante de la Ch62`;
+console.log(printUserName("Sebastian", "Gonzalez") );
+
+/*
+ ------------ Parámetros por defecto -----------------------
+             (default parameters)
+Inicializa un parámetro de la función, si no se envía el argumento cuando se invoca
+*/
+//const makeCoffe = ( type ) => `Preparando un café ${type}`;
+const makeCoffe = ( type = "Americano" ) => `Preparando un café ${type}`;
+console.log( makeCoffe("Latte") ); // Preparando un café Latte
+//console.log( makeCoffe("Undefined") ); //Preparando un café Undefined
+console.log( makeCoffe() ); //Preparando un cafe americano
+
+// TODO: generar una función que calcule el área de un rectángulo
+// usando parámetros por defecto para largo y ancho.
+
+const calculateArea = (base = 5, altura = 5) => `El área de tu rectángulo es: ${base*altura}`;
+
+console.log( calculateArea(10,4) );
+console.log( calculateArea() );
