@@ -65,3 +65,16 @@ sintaxis:
         instrucciones;
     };
 */
+
+console.log( printFullName("Johan", "Gonzalez") );
+
+
+/**
+ * Función que recibe nombre y apellido y retorna el nombre completo
+ * @param {string} firstName nombre de la persona
+ * @param {string} lastName apellido de la persona
+ * @returns concatenación del nombre y apellido de la persona en la cohorte Ch62
+ */
+const printFullName = function (firstName, lastName) {
+  return `${firstName} ${lastName} estudiante de la Ch62`;
+};
