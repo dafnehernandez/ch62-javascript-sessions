@@ -51,7 +51,6 @@ function saludar(nombre){
    
 }
 
-
 /*
  ------------ Funciones expresadas -----------------------
             (function expressions)
@@ -110,7 +109,6 @@ console.log( makeCoffe() ); //Preparando un cafe americano
 // TODO: generar una función que calcule el área de un rectángulo
 // usando parámetros por defecto para largo y ancho.
 
-
 const calculateArea = (base = 5, altura = 5) => `El área de tu rectángulo es: ${base*altura}`;
 
 console.log( calculateArea(10,4) );
@@ -119,7 +117,6 @@ console.log( calculateArea() );
 // Ejemplo de uso de default parameters
 console.log(`Vales 1000, estoy diciendo que vales: ${parseInt("1000")}`); // 1000
 console.log(`Vales 1000 base 2, estoy diciendo que vales: ${parseInt("1000", 2)}`); // 8
-
 
 /*
 Pase de datos:
@@ -159,8 +156,14 @@ const subtract = (a, b) => a - b;
 const multiply = (a, b) => a * b;
 // Crear una función que sume dos números
 const sum = (a,b) => a+b;
-const divide = (a,b) => a/b;
+const divide = (a,b) => a/b; //para dividir
+// Aplicar una función que calcule el residuo de una devisión, para saber si 6 es divisible entre 3
+const mod = (a,b) => a%b;
 
 console.log(`Realizando una resta: ${calculate(5, 3, subtract)}`); // 2
 console.log(`Realizando una multiplicación: ${calculate(5, 3, multiply )}`); // 15
 // Aplicar a la función calculate la función suma
+console.log(`Realizando una suma: ${calculate(5, 3, sum)}`); // 8
+console.log(`Realizando una division: ${calculate(6, 3, divide)}`); // 2
+// Aplicar a la función calculate la función modulo
+console.log(`Obteniendo el modulo: ${calculate(6, 3, mod)}`); // 2
