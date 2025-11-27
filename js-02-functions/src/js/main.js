@@ -26,7 +26,6 @@ console.log("JS-02 funciones");
 
 */
 
-
 /*
 https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Functions
 ----------- Funciones declaradas --------------
@@ -50,7 +49,6 @@ function saludar(nombre){
     console.log(`Hola ${nombre}, qué vas a comer hoy?`);
    
 }
-
 
 /*
  ------------ Funciones expresadas -----------------------
@@ -109,7 +107,6 @@ console.log( makeCoffe() ); //Preparando un cafe americano
 
 // TODO: generar una función que calcule el área de un rectángulo
 // usando parámetros por defecto para largo y ancho.
-
 
 const calculateArea = (base = 5, altura = 5) => `El área de tu rectángulo es: ${base*altura}`;
 
@@ -171,3 +168,4 @@ console.log(`Realizando una división: ${calculate(6, 3, divide )}`); // 2
 // Aplicar una función que calcule la potencia de un número
 console.log(`Realizando una división: ${calculate(6, 3, (a, b) => a ** b ) }`); // Math.pow(a,b) 
 // Aplicar una función que calcule el residuo de una devisión, para saber si 6 es divisible entre 3
+console.log(`Realizando una division y generado modulo: ${calculate(6, 3, (a, b) => a % b ) }`); //0
