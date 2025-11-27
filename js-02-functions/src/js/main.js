@@ -165,5 +165,9 @@ console.log(`Realizando una multiplicación: ${calculate(5, 3, multiply )}`); //
 // Aplicar a la función calculate la función suma
 console.log(`Realizando una suma: ${calculate(5, 3, sum)}`); // 8
 console.log(`Realizando una division: ${calculate(6, 3, divide)}`); // 2
+
+// Aplicar una función que calcule la potencia de un número
+console.log(`Realizando una potencia: ${calculate(6, 3, (a, b) => a ** b ) }`); // Math.pow(a,b) 
+// Aplicar una función que calcule el residuo de una devisión, para saber si 6 es divisible entre 3
 // Aplicar a la función calculate la función modulo
 console.log(`Obteniendo el modulo: ${calculate(6, 3, mod)}`); // 2
