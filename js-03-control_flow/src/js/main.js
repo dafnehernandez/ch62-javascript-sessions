@@ -93,3 +93,17 @@ console.log(alias); // Serchmo
  Si la persona está feliz, mostrar en la interfaz de usuario la imagen "public/images/dino.jpg"
  En caso contrario mostrar la imagen "public/images/dino-emo.png"
 */
+// if-else-if
+const checkTemperature = (temperature) => {
+    let message = "";
+  if (temperature > 30) {
+    message = "Hace calor";
+  } else if (temperature >= 15 && temperature <= 30) {
+    message ="Temperatura agradable";
+  } else if (temperature < 15 && temperature >= 0) {
+    message ="Hace frío";
+  } else {
+    message ="Hace mucho frío";
+  }
+  return message;
+};
