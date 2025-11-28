@@ -62,12 +62,23 @@ let temperature = (gradesOnCelsius) => {
 console.log(temperature(Number(prompt("Ingresa la temperatura en °C: "))));
 
 let isFeliz = (answer) => {
-    if (answer == "true"){
+    if (answer == "si"){ 
+        booleanAnswer = true
+    }
+    else {
+        booleanAnswer = false;
+    }
+
+    if (booleanAnswer == true){
         //dino
-        return imagen.src = "src/a/dino.jpg";
+        //return imagen.src = "public/images/dino.jpg";
+        return `felih`;
     }
     else {
         //dinoemo
-        return imagen.src = "src/a/dino-emo.jpg"
+        //return imagen.src = "public/images/dino-emo.jpg"
+        return `tite`;
     }
 };
+
+console.log(isFeliz(prompt("Ingresa 'si' si la persona esta feliz o 'no' si la persona no lo está: ")));
