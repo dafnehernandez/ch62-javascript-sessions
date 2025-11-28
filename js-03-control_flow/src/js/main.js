@@ -41,3 +41,33 @@
     else condición;   
 
 */
+
+/*
+ Realizar una función (Arrow function) que reciba un número como valor de temperatura.
+ Si la temperatura es mayor a 25 grados, retornar "Hace calor".
+ En caso contrario, retornar "Hace frío".
+ Imprimir el valor del retorno por consola.
+*/
+
+let temperature = (gradesOnCelsius) => {
+
+    if (gradesOnCelsius > 25){
+        return `Hace calor`;
+    }
+    else {
+       return `Hace frío`;
+    }
+};
+
+console.log(temperature(Number(prompt("Ingresa la temperatura en °C: "))));
+
+let isFeliz = (answer) => {
+    if (answer == "true"){
+        //dino
+        return imagen.src = "src/a/dino.jpg";
+    }
+    else {
+        //dinoemo
+        return imagen.src = "src/a/dino-emo.jpg"
+    }
+};
