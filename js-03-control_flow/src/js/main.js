@@ -82,3 +82,36 @@ let isFeliz = (answer) => {
 };
 
 console.log(isFeliz(prompt("Ingresa 'si' si la persona esta feliz o 'no' si la persona no lo está: ")));
+
+/*
+     Realizar una función que reciba un código(weatherCode) de temperatura.
+     De acuerdo al código recibo, retornar un mensaje:
+     Code   Description
+    0           Clear sky
+    1, 2, 3     Mainly clear, partly cloudy, and overcast
+    45, 48      Fog and depositing rime fog
+    
+*/
+
+let getWeather = (weatherCode) => {
+ /* switch (weatherCode) {
+    case 0: `Clear sky`;
+    case 1: `Mainly clear`;
+    case 2: `partly cloudy`;
+    case 3: `overcast`;
+    case 45: `Mainly clear`;
+    case 48: `Mainly clear`;
+  }
+    */
+  if(weatherCode == 0){
+    return `Clear sky`;
+  }
+  else if(weatherCode == 1 || weatherCode == 2 || weatherCode == 3){
+    return `Mainly clear, partly cloudy, and overcast`;
+  }
+  else if(weatherCode == 45 || weatherCode == 48){
+     return `Fog and depositing rime fog`;
+  }
+};
+
+console.log(getWeather(Number(prompt("Ingresa el codigo de tu clima para decirte que clima hay:"))));
