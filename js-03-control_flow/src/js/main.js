@@ -120,6 +120,8 @@ console.log(temperature(Number(prompt("Ingresa la temperatura en °C: "))));
  En caso contrario mostrar la imagen "public/images/dino-emo.png"
 */
 
+const img = document.getElementById("animicImage");
+
 let isFeliz = (answer) => {
     if (answer == "si"){ 
         booleanAnswer = true
@@ -130,13 +132,12 @@ let isFeliz = (answer) => {
 
     if (booleanAnswer == true){
         //dino
-        //return imagen.src = "public/images/dino.jpg";
-        return `felih`;
+        //return `felih`;
+        return img.src = "public/images/dino.jpg" 
     }
     else {
         //dinoemo
-        //return imagen.src = "public/images/dino-emo.jpg"
-        return `tite`;
+        return img.src = "public/images/dino-emo.png"  
     }
 };
 
@@ -256,3 +257,16 @@ console.log(getWeather(88));
   }
 
 */
+
+let getWeatherSwitch = (weatherCode) => {
+    switch (weatherCode) {
+        case 0: return `Clear sky`;
+        case 1: return `Mainly clear`;
+        case 2: return `partly cloudy`;
+        case 3: return `overcast`;
+        case 45: return `Fog`;
+        case 48: return `depositing rime fog`;
+  }
+};
+
+console.log(getWeatherSwitch(Number(prompt("Ingresa el codigo de tu clima para decirte que clima hay:"))));
