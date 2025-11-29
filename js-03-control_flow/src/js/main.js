@@ -208,7 +208,7 @@ let getWeather = (weatherCode) => {
   }
 };
 
-console.log(weatherCode(Number(prompt("Ingresa el codigo para obtener la temperatura: "))));
+console.log(getWeather(Number(prompt("Ingresa el codigo de tu clima para decirte que clima hay:"))));
 
 /* CODIGO DE SERCH
 const getWeather=(codigo)=>{
