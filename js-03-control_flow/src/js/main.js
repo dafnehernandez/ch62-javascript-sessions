@@ -188,7 +188,7 @@ console.log( isLoggedIn && "El usuario está logueado" || "El usuario no está l
     
 */
 
-let getWeather = (weatherCode) => {
+let getWeatherOriginal = (weatherCode) => {
  /* switch (weatherCode) {
     case 0: `Clear sky`;
     case 1: `Mainly clear`;
@@ -209,7 +209,7 @@ let getWeather = (weatherCode) => {
   }
 };
 
-console.log(getWeather(Number(prompt("Ingresa el codigo de tu clima para decirte que clima hay:"))));
+console.log(getWeatherOriginal(Number(prompt("Ingresa el codigo de tu clima para decirte que clima hay:"))));
 
 /* CODIGO DE SERCH
 const getWeather=(codigo)=>{
@@ -258,20 +258,6 @@ console.log(getWeather(88));
 
 */
 
-<<<<<<< HEAD
-let getWeatherSwitch = (weatherCode) => {
-    switch (weatherCode) {
-        case 0: return `Clear sky`;
-        case 1: return `Mainly clear`;
-        case 2: return `partly cloudy`;
-        case 3: return `overcast`;
-        case 45: return `Fog`;
-        case 48: return `depositing rime fog`;
-  }
-};
-
-console.log(getWeatherSwitch(Number(prompt("Ingresa el codigo de tu clima para decirte que clima hay:"))));
-=======
 const getAccessLevel = ( role ) => {
     let accessLevel;
     switch ( role ) {
@@ -294,4 +280,60 @@ console.log( getAccessLevel("admin") ); // Acceso completo al sistema
 console.log( getAccessLevel("super_admin") ); // Acceso completo al sistema
 console.log( getAccessLevel("editor") ); // Acceso para editar contenido
 console.log( getAccessLevel("customer") ); // Acceso denegado
->>>>>>> 304c409860889e6f66b0362b9bce2f15514c4f38
+
+/*
+ Refactorizar la función getWeather usando switch-case
+
+
+ /* CODIGO DE SERCH
+const getWeather=(codigo)=>{
+     let message;
+    if(codigo===0){
+        message="Clear Sky";
+    }else if( codigo===1 ||codigo===2 ||codigo===3  ){
+        message="Mainly clear, partly cloudy, and overcast";
+    }else if(codigo===45 || codigo===48){
+        message="Fog and depositing rime fog";
+    }else{
+        message="no definido";
+    }
+    return message;
+   
+}
+
+console.log(getWeather(88));
+*/
+
+let getWeather = (codigo) => {
+    switch (codigo) {
+        case 0: 
+            return `Clear sky`;
+        case 1: 
+        case 2:
+        case 3: 
+            return `Mainly clear, partly cloudy, and overcast`
+        case 45: 
+        case 48: 
+            return `Fog and depositing rime fog`;
+  }
+};
+
+let getWeatherOther = (codigo) => {
+    let message;
+    switch (codigo) {
+        case 0: 
+            message = "Clear sky";
+            break;
+        case 1 || 2 || 3: 
+            message = "Mainly clear, partly cloudy, and overcast";
+            break; 
+        case 45 || 48: 
+            message = "Fog and depositing rime fog";
+            break;
+    }
+    return message;
+};
+
+console.log(getWeather(Number(prompt("(switch) Ingresa el código de tu clima para decirte que clima hay:"))));
+
+console.log(getWeatherOther(Number(prompt("(switch 2) Ingresa el código de tu clima para decirte que clima hay:"))));
