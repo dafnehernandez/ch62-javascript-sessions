@@ -29,3 +29,14 @@ const numbers = new Array(5); // array with 5 empty slots [ <5 empty items> ]
 // [length - 1] -> Último elemento
 
 const techStack = ["HTML", "CSS", "JavaScript"];
+
+// Acceder al primer elemento
+console.log(`Accediendo al primer elemento:  ${ techStack[0] }` ); // "HTML"
+
+// Acceder al primer elemento
+console.log( techStack.length ); // 3
+console.log(`Accediendo al primer elemento:  ${ techStack[0] }` ); // "HTML"
+// Accediendo al segundo elemento
+console.log(`Accediendo al segundo elemento:  ${ techStack[1] }` ); // "CSS"
+// Acceder al último elemento (longitud - 1)
+console.log(`Accediendo al último elemento:  ${ techStack[techStack.length - 1]}` ); // "Javascript"
