@@ -258,6 +258,7 @@ console.log(getWeather(88));
 
 */
 
+<<<<<<< HEAD
 let getWeatherSwitch = (weatherCode) => {
     switch (weatherCode) {
         case 0: return `Clear sky`;
@@ -270,3 +271,27 @@ let getWeatherSwitch = (weatherCode) => {
 };
 
 console.log(getWeatherSwitch(Number(prompt("Ingresa el codigo de tu clima para decirte que clima hay:"))));
+=======
+const getAccessLevel = ( role ) => {
+    let accessLevel;
+    switch ( role ) {
+        case "super_admin":                   
+        case "admin":
+            accessLevel = "Acceso completo al sistema";
+            break;
+        case "editor":
+            accessLevel = "Acceso para editar contenido";
+            break
+        case "viewer":
+            accessLevel = "Acceso solo para ver contenido";
+            break;
+        default:
+            accessLevel = "Acceso denegado";
+    }
+    return accessLevel;
+};
+console.log( getAccessLevel("admin") ); // Acceso completo al sistema
+console.log( getAccessLevel("super_admin") ); // Acceso completo al sistema
+console.log( getAccessLevel("editor") ); // Acceso para editar contenido
+console.log( getAccessLevel("customer") ); // Acceso denegado
+>>>>>>> 304c409860889e6f66b0362b9bce2f15514c4f38
