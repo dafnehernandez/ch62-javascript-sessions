@@ -201,6 +201,9 @@ console.log(getWeather(88));
 
 */
 
+/**
+ * Switch case con el patrón "Single Entry, Single Exit"
+ */
 const getAccessLevel = ( role ) => {
     let accessLevel;
     switch ( role ) {
@@ -219,7 +222,32 @@ const getAccessLevel = ( role ) => {
     }
     return accessLevel;
 };
+
+
+/**
+ * Switch case con el patrón "Early Return"
+ */
+const getAccessLevelWithEarlyReturn = ( role ) => {
+    switch ( role ) {
+        case "super_admin":                   
+        case "admin":
+            return "Acceso completo al sistema";      
+        case "editor":
+           return "Acceso para editar contenido";           
+        case "viewer":
+            return "Acceso solo para ver contenido";           
+        default:
+            return "Acceso denegado";
+    }    
+};
+
 console.log( getAccessLevel("admin") ); // Acceso completo al sistema
 console.log( getAccessLevel("super_admin") ); // Acceso completo al sistema
 console.log( getAccessLevel("editor") ); // Acceso para editar contenido
 console.log( getAccessLevel("customer") ); // Acceso denegado
+
+
+/*
+ Refactorizar la función getWeather usando switch-case
+*/
+//const getWeatherSwitch=(codigo)=>
