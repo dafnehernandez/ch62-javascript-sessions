@@ -36,7 +36,36 @@ console.log(`Accediendo al primer elemento:  ${ techStack[0] }` ); // "HTML"
 // Acceder al primer elemento
 console.log( techStack.length ); // 3
 console.log(`Accediendo al primer elemento:  ${ techStack[0] }` ); // "HTML"
+
 // Accediendo al segundo elemento
 console.log(`Accediendo al segundo elemento:  ${ techStack[1] }` ); // "CSS"
+
 // Acceder al último elemento (longitud - 1)
 console.log(`Accediendo al último elemento:  ${ techStack[techStack.length - 1]}` ); // "Javascript"
+
+// --- 3. Modificación de Elementos ---
+techStack[1] = "Sass"; // Cambiando "CSS" por "Sass"
+console.log("Después de la modificación:", techStack); // ["HTML", "Sass", "JavaScript"]
+
+/* ================================================================
+   BLOQUE 2: MÉTODOS DE ARRAYS (Add/Remove) 
+   ================================================================
+   JavaScript nos da métodos para manipular la lista como una pila o cola.
+*/
+const shoppingList = ["Leche", "Huevos"];
+// 1. push(): Agrega al FINAL (El más usado)
+// Retorna la nueva longitud del array.
+shoppingList.push("Pan"); 
+console.log("Push:", shoppingList); // ["Leche", "Huevos", "Pan"]
+// 2. unshift(): Agrega al INICIO (Mueve todos los índices, es más lento)
+shoppingList.unshift("Café");
+console.log("Unshift:", shoppingList); // ["Café", "Leche", "Huevos", "Pan"]
+
+// --- Eliminar Elementos ---
+// 3. pop(): Elimina el ÚLTIMO y lo devuelve
+const removedItem = shoppingList.pop();
+console.log(`Eliminado con pop: ${removedItem}`); // "Pan"
+console.log("Lista actual:", shoppingList);
+// 4. shift(): Elimina el PRIMERO y lo devuelve
+const firstRemoved = shoppingList.shift();
+console.log(`Eliminado con shift: ${firstRemoved}`); // "Café"
