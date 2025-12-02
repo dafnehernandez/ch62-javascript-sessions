@@ -85,4 +85,12 @@ console.log("Después de agregar con splice:", colors.toString() );
 // 2. Agrega un invitado al final.
 // 3. Agrega un invitado al principio
 // 4. Elimina al segundo invitado (índice 1) y agrega a otro en su lugar.
-// 4. Muestra la lista final.
+// 5. Muestra la lista final.
+
+const guestList = ['Damara', 'Angel']; //1
+guestList.push('Fatima'); //2
+guestList.unshift('Daniel'); //3
+console.log('Invitados iniciales:', guestList.toString() ); //antes del splice;
+guestList.splice(1, 1, 'Hilda'); //4
+console.log('Después de agregar y eliminar con splice:', guestList.toString() ); //con to string no separa y con join si se puede controlar
+console.log('Lista final de invitados usando join:', guestList.join(', ')); //paso 5
