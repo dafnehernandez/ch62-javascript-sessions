@@ -103,12 +103,17 @@ console.log('Lista final de invitados usando join:', guestList.join(', ')); //pa
    1. LIFO (Last-In, First-Out) - Pila (Stack)
    Concepto: El último elemento en entrar es el primero en salir.
 */
+
 // Navegamos a sitios (push)
 const historyStack = [];
 historyStack.push("google.com");
 historyStack.push("youtube.com");
 historyStack.push("github.com");
-console.log("Historial actual:", historyStack);
+
+console.log("Historial actual:" + historyStack); // ["google.com", "youtube.com", "github.com"]
+
+// Presiono el botón de "atrás"
+console.log(`Regresando a: ${ historyStack.pop() }`); // "github.com"
 
 /*   2. FIFO (First-In, First-Out) - Cola (Queue)
    Concepto: El primer elemento en entrar es el primero en salir.
@@ -117,9 +122,12 @@ const printQueue = [];
 printQueue.push("thesis.pdf");
 printQueue.push("meme.png");
 printQueue.push("invoice.docx");
+
 console.log("Cola de impresión:", printQueue); // ["thesis.pdf", "meme.png", "invoice.docx"]
+
 // La impresora termina el primer trabajo (shift)
 const printingNow = printQueue.shift();
+
 console.log(`Imprimiendo: ${printingNow}`); // thesis.pdf (El primero que llegó)
 
 /* ================================================================
