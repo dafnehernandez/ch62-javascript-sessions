@@ -254,3 +254,25 @@ for (let index = 0; index < countries.length; index++) {
    const element = countries[index];
    console.log(`(for) País en índice ${index}: ${element}`);   
 }
+
+// TODO: RETO FINAL (Simulación de Cajero)
+// Tienes un array de movimientos: [100.00, -50.00, 200.00, -100.00]
+// 1. Usa un ciclo FOR, o WHILE o FOR-OF para recorrer los movimientos.
+// 2. Suma los valores a una variable 'totalBalance'.
+// 3. Imprime el balance final.
+const transactions = [100.00, -50.00, 200.00, -100.00, 500.00];
+
+let totalBalance = 0;
+//For normal 
+for(let i = 0; i < transactions.length ; i++){
+   totalBalance += transactions[i];
+}
+console.log("El balance total es", totalBalance);
+
+totalBalance = 0;
+//For OF
+for(const monto of transactions){
+   totalBalance += monto;
+}
+
+console.log("El balance total es", totalBalance);
