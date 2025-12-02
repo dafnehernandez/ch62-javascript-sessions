@@ -154,8 +154,37 @@ taskList.unshift('Apagar frijoles de la olla'); //4
 console.log('Una tarea urgente fue añadida, la lista de tareas queda así:' , taskList.join(', ')); //5 Apagar, uniformes, barrer
 console.log(`La primer tarea fue atendida (eliminada): ${taskList.shift()}`); //6 uniformes, barrer
 
-// =============================================
+/* ================================================================
+   BLOQUE 3: BUCLES (LOOPS) 
+   ================================================================
+   Estructuras que repiten un bloque de código mientras una condición sea verdadera.
+*/
+
+// --- 1. Ciclo FOR (Controlado) ---
+// Úsalo cuando sabes cuántas veces quieres repetir algo (ej. recorrer un array).
+// Sintaxis: for (expresión_inicial; condición; expresión_final) { ... }
+
+// Imprimier los números del 1 al 5
+
+for(let i = 1; i <=5 ; i++ ) {
+    console.log(`Número ${i}`);
+}
+
+// ------------------- Uso de break en ciclos ----------------------------
+// break detiene la ejecución de la iteración en curso y termina el ciclo.
+
+for(let i = 1; i <=10 ; i++ ) {
+    if(i === 6) {
+        console.log("¡Se alcanzó el número 6");
+        break; 
+    }
+      console.log(`(con break) Número ${i}`);
+}
+
+// ===============Ejercicio mentales ====================
+
 let iteracion = 0;
+
 for (  ;   ;  ){
     console.log( `Núm de iteración: ${iteracion}` ); // 0 , 1, 2, 3, 4
     iteracion++;
@@ -163,9 +192,12 @@ for (  ;   ;  ){
         break;
     }
 }
+console.log("Final", iteracion); // 5
 
 // =====================================================
+
 let myIteration; 
+
 for (myIteration = 0; myIteration <= 5; myIteration++) {
     console.log("For loop", myIteration ); // 0 , 1, 2
      if( myIteration === 2) break;  
@@ -181,8 +213,22 @@ console.log("Final", jiteration); //
 
 // =====================================================
 let k;
-for ( k = 0; k < 5; k++ )         ; 
+for ( k = 0; k < 5; k++ )   ; 
+
 {
    console.log("Valor de", k ); // 5
 }
 console.log("Final", k); // 5
+
+
+// ------------------- Uso de continue en ciclos ----------------------------
+// break: Termina completamente un bucle (for, while, switch, etc.).
+// continue: Salta la iteración actual y pasa a la siguiente sin salir del bucle.
+
+
+
+
+
+// --- 2. Ciclo WHILE (Basado en condición) ---
+// Úsalo cuando NO sabes cuántas veces se repetirá, depende de algo externo.
+// Cuidado: Si la condición nunca es falsa, creas un bucle infinito (Infinite Loop).
