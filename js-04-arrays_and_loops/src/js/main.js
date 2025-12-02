@@ -225,10 +225,32 @@ console.log("Final", k); // 5
 // break: Termina completamente un bucle (for, while, switch, etc.).
 // continue: Salta la iteración actual y pasa a la siguiente sin salir del bucle.
 
-
-
-
-
 // --- 2. Ciclo WHILE (Basado en condición) ---
 // Úsalo cuando NO sabes cuántas veces se repetirá, depende de algo externo.
 // Cuidado: Si la condición nunca es falsa, creas un bucle infinito (Infinite Loop).
+
+while(  confirm("¿Quieres tu número de la suerte")  ){
+    const numeroSuerte = Math.random(); // 0....1.0(sin incluir 1.0)
+    console.log("Tu número de la suerte es: " + numeroSuerte);
+}
+console.log("Gracias por participar");
+
+
+// Imprimier los números del 1 al 5 (FOR)
+for(let i = 1; i <=5 ; i++ ) {
+    console.log(`Número ${i}`);
+}
+
+// Imprimier los números del 1 al 5 (usando WHILE)
+let i = 1;
+while( i <= 5 ){
+   console.log("Valor de i es:", i);
+   i++
+}
+
+const countries = ["México", "USA", "Canadá", "Japón"];
+// Usando FOR LOOP
+for (let index = 0; index < countries.length; index++) {
+   const element = countries[index];
+   console.log(`(for) País en índice ${index}: ${element}`);   
+}
