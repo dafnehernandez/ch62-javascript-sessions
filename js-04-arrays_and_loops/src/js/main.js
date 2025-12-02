@@ -94,3 +94,53 @@ console.log('Invitados iniciales:', guestList.toString() ); //antes del splice;
 guestList.splice(1, 1, 'Hilda'); //4
 console.log('Después de agregar y eliminar con splice:', guestList.toString() ); //con to string no separa y con join si se puede controlar
 console.log('Lista final de invitados usando join:', guestList.join(', ')); //paso 5
+
+/*================================================================
+   BLOQUE 3: ESTRUCTURAS DE DATOS - PILAS Y COLAS 
+   ================================================================
+   Las pilas y colas son estructuras de datos que organizan cómo se 
+   almacenan y acceden a los elementos.
+   1. LIFO (Last-In, First-Out) - Pila (Stack)
+   Concepto: El último elemento en entrar es el primero en salir.
+*/
+// Navegamos a sitios (push)
+historyStack.push("google.com");
+historyStack.push("youtube.com");
+historyStack.push("github.com");
+console.log("Historial actual:", historyStack);
+
+/*   2. FIFO (First-In, First-Out) - Cola (Queue)
+   Concepto: El primer elemento en entrar es el primero en salir.
+*/
+const printQueue = [];
+printQueue.push("thesis.pdf");
+printQueue.push("meme.png");
+printQueue.push("invoice.docx");
+console.log("Cola de impresión:", printQueue); // ["thesis.pdf", "meme.png", "invoice.docx"]
+// La impresora termina el primer trabajo (shift)
+const printingNow = printQueue.shift();
+console.log(`Imprimiendo: ${printingNow}`); // thesis.pdf (El primero que llegó)
+
+/* ================================================================
+ Ejercicio:
+   Crea un array llamado 'taskList' para gestionar tareas.
+   1. Agrega 3 tareas usando 'push'.
+   2. Muestra la lista completa de tareas.
+   3. Las tareas normales se atienden en orden de llegada (FIFO)
+   3.1 Retira (elimina) la primera tarea de la lista y muéstrala.
+   4. No dan un tarea URGENTE que debe ser atendido inmediatamente.
+    Por lo que debes poner al inicio de la lista.
+   5. Muestra la lista actualizada.
+   6. Atiende (elimina) la primera tarea de la lista y muéstrala.
+*/
+
+const taskList = []; //1
+taskList.push('Lavar trastes'); //2
+taskList.push('Lavar uniforme de TKD');
+taskList.push('Barrer la sala');
+console.log('La lista de tareas la siguiente:' , taskList.join(', ')); //3
+//const taskEliminated =  taskList.shift();
+console.log(`Tarea atendida (eliminada): ${taskList.shift()}`); // Lavar trastes (El primero que llegó) //3.1
+taskList.unshift('Apagar frijoles de la olla'); //4
+console.log('La urgencia agregada a la lista de tareas quedando así:' , taskList.join(', ')); //5 Apagar, uniformes, barrer
+console.log(`La primer tarea fue atendida (eliminada): ${taskList.shift()}`); //6 uniformes, barrer
