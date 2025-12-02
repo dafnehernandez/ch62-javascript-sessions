@@ -104,6 +104,7 @@ console.log('Lista final de invitados usando join:', guestList.join(', ')); //pa
    Concepto: El último elemento en entrar es el primero en salir.
 */
 // Navegamos a sitios (push)
+const historyStack = [];
 historyStack.push("google.com");
 historyStack.push("youtube.com");
 historyStack.push("github.com");
@@ -142,5 +143,5 @@ console.log('La lista de tareas la siguiente:' , taskList.join(', ')); //3
 //const taskEliminated =  taskList.shift();
 console.log(`Tarea atendida (eliminada): ${taskList.shift()}`); // Lavar trastes (El primero que llegó) //3.1
 taskList.unshift('Apagar frijoles de la olla'); //4
-console.log('La urgencia agregada a la lista de tareas quedando así:' , taskList.join(', ')); //5 Apagar, uniformes, barrer
+console.log('Una tarea urgente fue añadida, la lista de tareas queda así:' , taskList.join(', ')); //5 Apagar, uniformes, barrer
 console.log(`La primer tarea fue atendida (eliminada): ${taskList.shift()}`); //6 uniformes, barrer
