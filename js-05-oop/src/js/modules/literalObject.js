@@ -14,7 +14,10 @@ incluso si tienen el mismo nombre descriptivo.
 
 */
 
+const internalId = Symbol("id");
+
 const literalUser = {
+    [internalId]: "User-T100",
     name: "Alejandro",
     age: 28,
     email: "canrued@gmail.com",
@@ -22,6 +25,9 @@ const literalUser = {
     getFullName() {
         //return `${literalUser.name} ${literalUser.lastName} ${literalUser.age}`;
          return `${this.name} ${this.lastName} ${this.age}`;
+    },
+    stringify() {
+        return JSON.stringify(this);
     }
 }
 
