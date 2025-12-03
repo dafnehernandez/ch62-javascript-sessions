@@ -8,29 +8,6 @@
     de manera clara, lo que facilita la comprensión de cómo interactúan los diferentes módulos entre sí.
     4. Mejora del rendimiento: Los navegadores pueden cargar y ejecutar módulos 
     de manera más eficiente, ya que solo cargan los módulos necesarios cuando se requieren.    
-<<<<<<< HEAD
-*/
-
-/**
- * Modifica el titulo principal de la página.
- * @param {string} titleId - El ID del elemento del título a modificar
- * @param {string} imageName - Nombre de la imagen 
- */
-const changePrincipalTitle = ( titleId ) => {
-    const titleElement = document.getElementById( titleId );
-    if ( titleElement ) {
-        titleElement.innerText = "OOP in JavaScript, Cohorte 62";
-    } else {
-        console.warn( `Element with id "${ titleId }" not found.` );
-    }
-}
-
-//Exporta la función para que pueda ser utilizada en otros módulos
-//Exportación nombrada
-export {changePrincipalTitle};
-
-//si vamos a exportar mas de un elemento se separa con comas
-=======
 
 */
 
@@ -50,4 +27,3 @@ const changePrincipalTitle = (titleId) => {
 // Exporta la función para que pueda ser utilizada en otros módulos.
 // Exportación nombrada
 export { changePrincipalTitle };
->>>>>>> 48ee83f645e9006629e8d38706bcf8faaee4baeb

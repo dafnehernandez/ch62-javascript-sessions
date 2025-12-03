@@ -3,9 +3,10 @@
 //console.log(`Datos del arreglo participants desde main.js:`, participants); // ['Alice', 'Bob', 'Charlie']
 
 // importanción nombrada
+import { User } from "../models/User.js"
 import { changePrincipalTitle } from "./modules/changePrincipalTitle.js";
 import { changeLogoImage } from "./modules/changeLogoImage.js";
-import {literalUser } from "./modules/literalObject.js";
+import { literalUser } from "./modules/literalObject.js";
 
 changePrincipalTitle("title");
 
@@ -20,3 +21,10 @@ changeLogoImage("guardian");
 console.log( literalUser.getFullName() );
 console.log( literalUser );
 console.log ( literalUser.stringify() );
+
+const fatima = new User("Fatima", "Orozco", 25, "fatima@gmail.com");
+const canito = new User("Alejandro", "Cano", 28, "canrued2010@gmail.com");
+const sergio = new User("Sergio", "Soriano", 28, "sgsoriano@gmail.com");
+console.log (canito.greet() );
+console.log (fatima.greet() );
+console.log (sergio.greet() );
