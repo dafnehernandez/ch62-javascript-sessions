@@ -19,7 +19,7 @@ const fatima = new User("Fatima", "Orozco", 25, "fatima@gmail.com");
 const juan = new User("Juan", "Perez", 28, "juan@gmail.com");
 const luis = new User("Luis", "Ramirez", 32, "luis@gmail.com");
 
-console.log( luis.greet() ); // Hello, I'm Luis Ramirez, 32 years old.
-console.log( juan.greet() ); // Hello, I'm Luis Ramirez, 32 years old.
-console.log( fatima.greet() ); // Hello, I'm Luis Ramirez, 32 years old.
+console.log( luis.greet() ); // Hello, I'm Luis Ramirez, 32 years old. luis@gmail.com
+console.log( juan.greet() ); // Hello, I'm Juan Perez, 28 years old. juan@gmail.com
+console.log( fatima.greet() ); // Hello, I'm Fatima Orozco, 25 years old. fatima@gmail.com.
 
